@@ -122,21 +122,21 @@ export default function App() {
         type='text'
         placeholder='Adı'
         onChange={handleChange}
-        name='firstName'
+        name={formData.firstName}
       />
 
       <input
         type='text'
         placeholder='Soyadı'
         onChange={handleChange}
-        name='lastName'
+        name={formData.lastName}
       />
 
       <input
         type='email'
         placeholder='Email'
         onChange={handleChange}
-        name='email'
+        name={formData.email}
       />
 
       <fieldset>
@@ -151,6 +151,7 @@ export default function App() {
               name='privacyResponse'
               value='yes'
               onChange={handleChange}
+              checked={formData.privacyResponse === 'yes'}
             />
             Evet
           </label>
@@ -163,6 +164,7 @@ export default function App() {
               value='no'
               defaultChecked
               onChange={handleChange}
+              checked={formData.privacyResponse === 'no'}
             />
             Hayır
           </label>
@@ -174,6 +176,7 @@ export default function App() {
               name='privacyResponse'
               value='absolutely'
               onChange={handleChange}
+              checked={formData.privacyResponse === 'absolutely'}
             />
             Kesinlikle
           </label>
@@ -186,7 +189,7 @@ export default function App() {
           değerlendirirsiniz?
         </legend>
 
-        <select onChange={handleChange} name='rating' defaultValue='10'>
+        <select onChange={handleChange} name='rating' defaultValue='10' value={formData.rating}>
           <option value='1'>1</option>
           <option value='2'>2</option>
           <option value='3'>3</option>
@@ -205,6 +208,7 @@ export default function App() {
           type='checkbox'
           name='marketingResponse'
           onChange={handleChange}
+          checked={formData.marketingResponse}
         />
 
         <div className='checkmark'></div>
