@@ -121,22 +121,25 @@ export default function App() {
       <input
         type='text'
         placeholder='Adı'
+        name='firstName'
         onChange={handleChange}
-        name={formData.firstName}
+        value={formData.firstName}
       />
 
       <input
         type='text'
         placeholder='Soyadı'
+        name='lastName'
         onChange={handleChange}
-        name={formData.lastName}
+        value={formData.lastName}
       />
 
       <input
         type='email'
         placeholder='Email'
+        name='email'
         onChange={handleChange}
-        name={formData.email}
+        value={formData.email}
       />
 
       <fieldset>
